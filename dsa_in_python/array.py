@@ -1,4 +1,4 @@
-import array
+# import array
 # # we dont need to write array every where jus rught below line
 # # from array import *  
 # # alias name of array
@@ -59,10 +59,35 @@ import array
 # for j in arr:
 #     print(j,end=" ")
     
-arr=array.array('i',[12,1,3,4,55,33,445,55])
-ind=arr.index(445)
-print(ind)
-for i in arr:
-    print(i,end=" ")
-print('\n')
-print(ind)
+# arr=array.array('i',[12,1,3,4,55,33,445,55])
+# ind=arr.index(445)
+# print(ind)
+# for i in arr:
+#     print(i,end=" ")
+# print('\n')
+# print(ind)
+
+from numpy import *
+# val=array([1,2,3,4,5])
+# arranf number with mathematical progression work of linspace first number for starting point number and second one is for ending point and last is partion of number
+# val=linspace(10,30,6)
+# in arange last number is add to previous one
+# val=arange(5,50,3) 
+#  logspace number point in the form of 10 raised to power or e raised to power e means 10
+# val=logspace(20,40,3)
+# val=zeros(8)
+# val=ones(3)
+# val=full(8,3)
+# for x in val:
+#     print(x,end=" ")
+    
+zero=array(10)
+print(zero)
+one_D=array([1,2,3,4,5])
+print(one_D)
+#  two dimensional array is collection of one Dimensional array
+two_D=array([[1,2,3],[1,2,3]])
+print(two_D)
+three_D=array([[[1,2,3],[1,2,3]],[[4,5,6],[4,5,6]]])
+
+print(three_D)
