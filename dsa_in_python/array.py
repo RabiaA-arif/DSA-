@@ -50,11 +50,19 @@ import array
 # for i in slc:
 #     print(i,end=' ')
     
-arr=array.array('i',[])
+# arr=array.array('i',[])
 
-n=int(input("Enter the number"))
-for i in range(0,n):
-    arr.append(int(input("input next number")))
+# n=int(input("Enter the number"))
+# for i in range(0,n):
+#     arr.append(int(input("input next number")))
     
-for j in arr:
-    print(j,end=" ")
+# for j in arr:
+#     print(j,end=" ")
+    
+arr=array.array('i',[12,1,3,4,55,33,445,55])
+ind=arr.index(445)
+print(ind)
+for i in arr:
+    print(i,end=" ")
+print('\n')
+print(ind)
