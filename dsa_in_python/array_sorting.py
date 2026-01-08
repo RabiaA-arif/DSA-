@@ -6,13 +6,14 @@ import array
 my_arr=array.array('i',[3,2,4,7])
 sort_arr=array.array('i',[])
 for i in range(len(my_arr)):
-    # print(i)
-  if i % 2 == 0 and  my_arr[i] % 2 == 0:
-        sort_arr.append(my_arr[i])
+  if i%2==0:
+    print(i)
+    if my_arr[i]%2==0:
+      print(my_arr)
     
-  else: 
-    sort_arr.append(my_arr[i]) 
+    
+   
+      
         
-        
-for j in sort_arr:
-    print(j,end=" ")
+# for j in sort_arr:
+#     print(j,end=" ")
