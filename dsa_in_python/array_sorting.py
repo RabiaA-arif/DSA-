@@ -1,19 +1,24 @@
 import array
-# You are given an array `nums` consisting of integers where 
-# half of the numbers are even, and the other half are odd.
-# Your objective is to rearrange the array such that each 
-# even number appears at an even index, and each odd number appears at an odd index.
-my_arr=array.array('i',[3,2,4,7])
+arr=array.array('i',[1,2,2,3,33,41,4,5,21,6,7,8])
+even_array=array.array('i',[])
+odd_array=array.array('i',[])
 sort_arr=array.array('i',[])
-for i in range(len(my_arr)):
-  if i%2==0:
-    print(i)
-    if my_arr[i]%2==0:
-      print(my_arr)
+for i in range(len(arr)):
+  if arr[i]%2==0:
+    even_array.append(arr[i])
     
-    
-   
-      
-        
-# for j in sort_arr:
-#     print(j,end=" ")
+  else:
+    odd_array.append(arr[i])
+  
+  
+
+for j in range(len(even_array)):
+  
+  sort_arr.append(even_array[j])
+  
+  sort_arr.append(odd_array[j])
+  
+  
+print(even_array,"even array")
+print(odd_array, "odd array")
+print(sort_arr,"sorted array according to even odd index")
