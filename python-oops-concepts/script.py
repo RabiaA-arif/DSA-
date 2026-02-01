@@ -1,3 +1,4 @@
+from datetime import datetime
 class Dog:
     def __init__(self,name,breed,owner):# init class run only once when we create instance of class
         self.name=name
@@ -52,18 +53,33 @@ person2.greet()
 class User:
     def __init__(self,username,email,password):
         self.username=username
-        self.__email=email
+        # self.__email=email
+        self._email=email
         self.password=password
         
         
     def welcom_user(self,user):
-        print(f"dear {user.username} welcome in our code space and here is your  email {user.__email} and password {user.password}")
+        print(f"dear {user.username} welcome in our code space and here is your  email {user._email} and password {user.password}")
         
     def clean_email(self):
-        return self.__email.lower().strip()
+        return self._email.lower().strip()
     
-user1=User("rabia arif","rabiaarif@gmail.com","arif123")
-user2=User("Tayyaba","   taYyaba@gmail.com","tayyaba11")
-user1.welcom_user(user2)
-print(user2.__email)
-print(user2.clean_email())
+    def get_email(self):
+        print(f"email acces on the date and time {datetime.now()}")
+        return self._email
+    
+    def set_email(self,new_email):
+        if "@" in new_email:
+            self._email=new_email
+        
+user1=User("rabia arif","rabia@gmail.com","arif123")
+# user2=User("Tayyaba","   taYyaba@gmail.com","tayyaba11")
+# user1.welcom_user(user2)
+# print(user2._email)
+# print(user2.clean_email())
+print(user1.get_email())
+user1.set_email("rabiaarif@gmail.com")
+print(user1.get_email())
+
+user1.set_email("1234jfhri55")
+print(user1.get_email())
