@@ -56,7 +56,10 @@ class User:
         # self.__email=email
         self._email=email
         self.password=password
-        
+    @property
+    def email(self):
+        print("accessed email")
+        return self._email
         
     def welcom_user(self,user):
         print(f"dear {user.username} welcome in our code space and here is your  email {user._email} and password {user.password}")
@@ -67,19 +70,26 @@ class User:
     def get_email(self):
         print(f"email acces on the date and time {datetime.now()}")
         return self._email
-    
-    def set_email(self,new_email):
+    @email.setter
+    def email(self,new_email):
+    # def set_email(self,new_email):
         if "@" in new_email:
             self._email=new_email
         
-user1=User("rabia arif","rabia@gmail.com","arif123")
+# user1=User("rabia arif","rabia@gmail.com","arif123")
 # user2=User("Tayyaba","   taYyaba@gmail.com","tayyaba11")
 # user1.welcom_user(user2)
 # print(user2._email)
 # print(user2.clean_email())
-print(user1.get_email())
-user1.set_email("rabiaarif@gmail.com")
-print(user1.get_email())
+# print(user1.get_email())
+# user1.set_email("rabiaarif@gmail.com")
+# print(user1.get_email())
 
-user1.set_email("1234jfhri55")
+# user1.set_email("1234jfhri55")
+# print(user1.get_email())
+
+
+user1=User("shaun","shaun@gmail.com","2345")
+user1.email="this is not an email"
 print(user1.get_email())
+print(user1.email)
