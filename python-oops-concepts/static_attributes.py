@@ -33,7 +33,8 @@ class BankAccount:
     def deposit(self,amount):
         if amount >0:
             self._balance+=amount
-            print(f"{self.owner} your new balance is {self._balance}")
+            # print(f"{self.owner} your new balance is {self._balance}")
+            self.__log_transaction("deposit",amount)
         else:
             print("deposit amount mut be greater than 10 rs ")
             
@@ -41,9 +42,24 @@ class BankAccount:
     def is_valid_interest_rata(rate):
         return 0 <= rate <=5 
     
+    #  protected method
     
-acount=BankAccount("rabia",100)
+    def _is_valid(self,amount):
+        print(f"Amount is {amount}")
+        return amount > 0
+        
+    
+    #  private  method
+    
+    def __log_transaction(self,transaction_type,amount):
+        print(f"logging {transaction_type} of  {amount}  rupees, New balance is  {self._balance} pkr ")
+    
+    
+acount=BankAccount("rabia",1090)
 acount.deposit(500)
 
+acount._is_valid(1000)   # but we cant access as out of class becuase it our responcibility not aces out of the class
 print(BankAccount.is_valid_interest_rata(2))
 print(BankAccount.is_valid_interest_rata(7))
+
+# acount._log_transaction("cash",2000) # we cant access it bucause it private method
