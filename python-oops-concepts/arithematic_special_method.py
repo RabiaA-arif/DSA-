@@ -32,9 +32,60 @@ class Duration:
         self.minutes=minutes
         
     def __add__(self,other):
-        if isinstance(other,Cart):
+        if not isinstance(other,Duration):
+            return NotImplemented
+        mint=self.minutes + other.minutes
+        # print(mint)
+        if mint >60:
+            hour=mint/60
+            # print(hour)
+            # print("remaining mint :" ,rem_mint)
+            total_hour=self.hours + other.hours + hour
+            tot_minute=mint%60
+            print("Time Duration is hour : minutes ")
+            return f"{int(total_hour)} : {tot_minute}"
+        else :
+            mnt=self.minutes + other.minutes
+            hur=self.hours + other.hours
+            print("Time Duration is hour : minutes ")
+            return f"{hur} , {mnt}"
+    
+time2=Duration(2,10)
+time1=Duration(0,10)
+
+time=time1 + time2
+print(time)
+    
+    
+ ################# specil method forr subtraction #####################
+ 
+class Warehouse:
+    def __init__(self,stock):
+        self.stock_count=stock
+    
+    
+    def __sub__(self,other):
+        if not isinstance(other,Warehouse):
             return NotImplemented
         
-        total_hour=self.minutes/60
+        differece=self.stock_count - other.stock_count
+        if differece <0:
+            raise ValueError("stock value is in minus")
         
+        return Warehouse(differece)
+    
+    def __repr__(self):
+        return f"warehouse stock {self.stock_count} "
+   
         
+    
+obj1=Warehouse(10)
+obj2=Warehouse(6)
+res=obj1 - obj2
+print(res)
+print(res.stock_count,"stock count")
+print(res)
+
+
+
+####################### specila method __mul__ practice ###############
