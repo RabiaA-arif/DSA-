@@ -41,3 +41,11 @@ print(miles*1.3)
 x=1
 print(x+1)
 # print(x=1) type error :when operation is applied on inaproprite of function
+
+# ODER OF OPERATION  : python follow oder for mathematics operation PEMDAS(paranthesis,exponents,multiply,divide,add,subtract)
+# STRING OPERATION : we cant perform operation on string except +(concatenation) and * (it perform repition on string)
+str1="hello"
+str2="world"
+strr=str1 +str2
+print(strr)
+print(strr *5)
