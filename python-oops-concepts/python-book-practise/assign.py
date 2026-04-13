@@ -49,3 +49,33 @@ str2="world"
 strr=str1 +str2
 print(strr)
 print(strr *5)
+
+
+# 42=n error
+x=y=2
+print(x)
+print(y)
+
+greet="Hello welcome !";
+# greet="Hello welcome !". syntax error 
+# print(xy) NameError
+# TASK 1
+r=5
+pie=3.14
+volume_radius=4/3*(pie*(r**3))
+print(volume_radius)
+print(r ** 3)
+  
+  
+# TASK 2
+cover_price=24.95
+discount=40/100
+first_shiping_cost=3
+each_shiping_cost=75/100
+total_copy_sell=60
+total_shipping_cost=first_shiping_cost +((total_copy_sell-1)*each_shiping_cost)
+wholesale_price_per=cover_price *(1-discount) + total_shipping_cost 
+
+total_wholsale_price=wholesale_price_per *total_copy_sell
+print(f"price of per book : {wholesale_price_per}")
+print(f"Total wholesale price is : {total_wholsale_price}")
