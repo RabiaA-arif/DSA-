@@ -79,3 +79,14 @@ wholesale_price_per=cover_price *(1-discount) + total_shipping_cost
 total_wholsale_price=wholesale_price_per *total_copy_sell
 print(f"price of per book : {wholesale_price_per}")
 print(f"Total wholesale price is : {total_wholsale_price}")
+
+
+# TASK 3
+initial_time=6.52
+run_time=8.15
+tempo_time=3 *7.12
+total_time=run_time + tempo_time
+return_time=initial_time + total_time
+print(f"you return back : {return_time} minutes")
+
+
